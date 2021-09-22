@@ -17,13 +17,14 @@
         <div class="navbar">
             <img class="logo" src="./img/logo.png" alt="logo-playstation">
             <nav>
-                <ul>
-                    <li><a class="nav-link" href="#">Consoles</a></li>
-                    <li><a class="nav-link"  href="#">Acessórios</a></li>
-                    <li><a class="nav-link" href="#">Controles</a></li>
-                    <li><a class="nav-link" href="#">Outros</a></li>
+                <ul id="menu-list">
+                    <li class="nav-li"><a class="nav-link" href="#">Consoles</a></li>
+                    <li class="nav-li"><a class="nav-link"  href="#">Acessórios</a></li>
+                    <li class="nav-li"><a class="nav-link" href="#">Controles</a></li>
+                    <li class="nav-li"><a class="nav-link" href="#">Outros</a></li>
                 </ul>
             </nav>
+            <img src="./img/menu.png" alt="foto_menu"class="menu-icon" onclick="showMenu()">
         </div>
         <div class="row">
             <div class="column-1">
@@ -31,7 +32,7 @@
                 <h3>Wireless Controller for PlayStation</h3>
                 <p>Controle Original</p>
                 <h4>R$ 222,50</h4>
-                <button class="buy">Comprar Agora</button>
+                <button class="buy">Comprar Agora <img src="./img/arrow.png" alt="seta"></button>
             </div>
             <div  class="column-2">
                 <img class="controller" src="./img/controller.png" alt="controle">
@@ -48,5 +49,18 @@
         </div>
     </div>
 </body>
+<script>
+    const menuList = document.getElementById("menu-list")
+    menuList.style.maxHeight = "0px"
+
+    function showMenu(){
+        if(menuList.style.maxHeight == "0px"){
+            menuList.style.maxHeight = "120px"
+        }else{
+            menuList.style.maxHeight = "0px"
+        }
+    }
+    
+</script>
 
 </html>
